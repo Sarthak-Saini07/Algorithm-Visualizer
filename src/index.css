@@ -1,0 +1,203 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
+
+    --card: 222 47% 8%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 47% 8%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 217 91% 60%;
+    --primary-foreground: 222 47% 11%;
+
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 38 92% 50%;
+    --accent-foreground: 222 47% 11%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --success: 142 71% 45%;
+    --success-foreground: 222 47% 11%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 222 47% 11%;
+
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 217 91% 60%;
+
+    --radius: 0.75rem;
+
+    /* Algorithm-specific colors */
+    --algo-compare: 217 91% 60%;
+    --algo-swap: 0 84% 60%;
+    --algo-sorted: 142 71% 45%;
+    --algo-current: 38 92% 50%;
+    --algo-visited: 270 70% 60%;
+    --algo-path: 142 71% 45%;
+
+    /* Graph colors */
+    --node-default: 217 33% 30%;
+    --node-active: 217 91% 60%;
+    --node-visited: 270 70% 60%;
+    --edge-default: 217 33% 25%;
+    --edge-active: 38 92% 50%;
+
+    /* DP table colors */
+    --cell-default: 217 33% 15%;
+    --cell-current: 217 91% 60%;
+    --cell-computed: 142 71% 45%;
+
+    --sidebar-background: 222 47% 6%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 217 91% 60%;
+    --sidebar-primary-foreground: 222 47% 11%;
+    --sidebar-accent: 217 33% 17%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 217 33% 17%;
+    --sidebar-ring: 217 91% 60%;
+  }
+
+  .light {
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    --primary: 217 91% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222 47% 11%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 38 92% 50%;
+    --accent-foreground: 222 47% 11%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 222 47% 11%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 217 91% 50%;
+
+    --algo-compare: 217 91% 50%;
+    --algo-swap: 0 84% 60%;
+    --algo-sorted: 142 71% 45%;
+    --algo-current: 38 92% 50%;
+    --algo-visited: 270 70% 60%;
+    --algo-path: 142 71% 45%;
+
+    --node-default: 210 40% 80%;
+    --node-active: 217 91% 50%;
+    --node-visited: 270 70% 60%;
+    --edge-default: 210 40% 70%;
+    --edge-active: 38 92% 50%;
+
+    --cell-default: 210 40% 96%;
+    --cell-current: 217 91% 50%;
+    --cell-computed: 142 71% 45%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 222 47% 11%;
+    --sidebar-primary: 217 91% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 40% 96%;
+    --sidebar-accent-foreground: 222 47% 11%;
+    --sidebar-border: 214 32% 91%;
+    --sidebar-ring: 217 91% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+
+  code, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer utilities {
+  .glow-primary {
+    box-shadow: 0 0 20px hsl(var(--primary) / 0.3);
+  }
+
+  .glow-accent {
+    box-shadow: 0 0 20px hsl(var(--accent) / 0.3);
+  }
+
+  .glow-success {
+    box-shadow: 0 0 20px hsl(var(--success) / 0.3);
+  }
+
+  .glow-destructive {
+    box-shadow: 0 0 20px hsl(var(--destructive) / 0.3);
+  }
+
+  .glass {
+    @apply bg-card/80 backdrop-blur-sm;
+  }
+}
+
+@layer components {
+  .algo-bar {
+    @apply transition-all duration-200 ease-out rounded-t;
+  }
+
+  .algo-bar-default {
+    @apply bg-primary;
+  }
+
+  .algo-bar-compare {
+    @apply bg-accent glow-accent;
+  }
+
+  .algo-bar-swap {
+    @apply bg-destructive glow-destructive;
+  }
+
+  .algo-bar-sorted {
+    @apply bg-success;
+  }
+
+  .algo-node {
+    @apply transition-all duration-300 ease-out;
+  }
+
+  .algo-cell {
+    @apply transition-all duration-200 ease-out;
+  }
+}
