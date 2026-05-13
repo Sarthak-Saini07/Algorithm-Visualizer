@@ -21,7 +21,7 @@ interface ComparisonPanelProps {
   onExportCSV: () => void;
 }
 
-const COLORS = ['hsl(217, 91%, 60%)', 'hsl(142, 71%, 45%)', 'hsl(38, 92%, 50%)', 'hsl(0, 84%, 60%)'];
+const COLORS = ['hsl(190, 100%, 50%)', 'hsl(320, 100%, 60%)', 'hsl(150, 100%, 45%)', 'hsl(45, 100%, 50%)'];
 
 export const ComparisonPanel: React.FC<ComparisonPanelProps> = ({
   results,

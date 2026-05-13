@@ -15,15 +15,15 @@ export const Header: React.FC = () => {
   }, [theme]);
 
   return (
-    <header className="h-16 border-b border-border bg-card/50 backdrop-blur-sm sticky top-0 z-50">
+    <header className="h-16 border-b border-border/40 bg-background/60 backdrop-blur-xl sticky top-0 z-50 shadow-[0_4px_30px_rgba(0,0,0,0.1)]">
       <div className="container h-full flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center">
-            <span className="text-primary-foreground font-bold text-lg">A</span>
+          <div className="w-10 h-10 rounded-lg bg-primary/20 border border-primary/50 text-primary glow-primary flex items-center justify-center transition-all duration-300 hover:scale-105">
+            <span className="font-bold text-lg font-mono tracking-tighter">&lt;A/&gt;</span>
           </div>
           <div>
-            <h1 className="text-xl font-bold">Algorithm Visualizer</h1>
-            <p className="text-xs text-muted-foreground">Learn algorithms step by step</p>
+            <h1 className="text-xl font-bold tracking-tight text-foreground">Algorithm Visualizer</h1>
+            <p className="text-xs text-muted-foreground font-mono">Learn algorithms step by step_</p>
           </div>
         </div>
 
