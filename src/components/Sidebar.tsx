@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { Activity, LayoutDashboard, BrainCircuit, Library, Settings, LogOut, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Activity, LayoutDashboard, BrainCircuit, Library, Settings, LogOut, ChevronLeft, ChevronRight, BarChart3 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
@@ -12,7 +12,8 @@ interface SidebarProps {
 const navItems = [
   { icon: LayoutDashboard, label: 'Workspace', path: '/app' },
   { icon: Library, label: 'Algorithms', path: '/app/algorithms' },
-  { icon: BrainCircuit, label: 'AI Copilot', path: '/app/ai' },
+  { icon: BarChart3, label: 'Compare', path: '/app/compare' },
+  { icon: BrainCircuit, label: 'AI Copilot', path: '/app/ai-copilot' },
   { icon: Settings, label: 'Settings', path: '/app/settings' },
 ];
 

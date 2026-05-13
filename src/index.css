@@ -72,64 +72,50 @@
 
   .light {
     --background: 210 40% 98%;
-    --foreground: 230 40% 10%;
-
+    --foreground: 222 47% 11%;
     --card: 0 0% 100%;
-    --card-foreground: 230 40% 10%;
-
+    --card-foreground: 222 47% 11%;
     --popover: 0 0% 100%;
-    --popover-foreground: 230 40% 10%;
-
-    --primary: 200 95% 45%;
+    --popover-foreground: 222 47% 11%;
+    --primary: 199 89% 45%;
     --primary-foreground: 0 0% 100%;
-
-    --secondary: 240 70% 60%;
-    --secondary-foreground: 0 0% 100%;
-
-    --muted: 210 20% 92%;
-    --muted-foreground: 220 15% 40%;
-
-    --accent: 320 80% 55%;
+    --secondary: 210 20% 94%;
+    --secondary-foreground: 222 47% 11%;
+    --muted: 210 20% 94%;
+    --muted-foreground: 215 16% 47%;
+    --accent: 271 81% 56%;
     --accent-foreground: 0 0% 100%;
-
-    --destructive: 0 85% 55%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 199 89% 45%;
 
-    --success: 145 75% 40%;
-    --success-foreground: 0 0% 100%;
-
-    --warning: 40 90% 50%;
-    --warning-foreground: 230 40% 10%;
-
-    --border: 214 30% 88%;
-    --input: 214 30% 88%;
-    --ring: 200 95% 45%;
-
-    --algo-compare: 40 90% 50%;
-    --algo-swap: 0 85% 55%;
-    --algo-sorted: 145 75% 40%;
-    --algo-current: 320 80% 55%;
+    --algo-compare: 45 93% 47%;
+    --algo-swap: 0 84% 60%;
+    --algo-sorted: 142 71% 45%;
+    --algo-current: 271 81% 56%;
     --algo-visited: 270 70% 60%;
     --algo-path: 145 75% 40%;
 
     --node-default: 210 20% 85%;
-    --node-active: 200 95% 45%;
-    --node-visited: 270 70% 60%;
+    --node-active: 199 89% 45%;
+    --node-visited: 271 81% 56%;
     --edge-default: 210 20% 80%;
-    --edge-active: 320 80% 55%;
+    --edge-active: 271 81% 56%;
 
     --cell-default: 210 20% 95%;
-    --cell-current: 200 95% 45%;
+    --cell-current: 199 89% 45%;
     --cell-computed: 145 75% 40%;
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 230 40% 10%;
-    --sidebar-primary: 200 95% 45%;
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 222 47% 11%;
+    --sidebar-primary: 199 89% 45%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 210 20% 92%;
-    --sidebar-accent-foreground: 230 40% 10%;
-    --sidebar-border: 214 30% 88%;
-    --sidebar-ring: 200 95% 45%;
+    --sidebar-accent: 210 20% 94%;
+    --sidebar-accent-foreground: 222 47% 11%;
+    --sidebar-border: 214 32% 91%;
+    --sidebar-ring: 199 89% 45%;
   }
 }
 
@@ -145,6 +131,17 @@
 
   code, .font-mono {
     font-family: 'JetBrains Mono', monospace;
+  }
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  *::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  * {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
   }
 }
 
